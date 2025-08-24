@@ -1,0 +1,126 @@
+/* Comfortaa font faces from local assets */
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('/assets/fonts/Comfortaa.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('/assets/fonts/Comfortaa-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Light theme inspired by UI screenshots (rounded, airy, playful) */
+:root {
+  /* Use the exact light background from UI; adjust if needed */
+  --bg: #f6f7fb;         /* light, slightly cool background */
+  --card: #ffffff;       /* surface */
+  --text: #1a1f2b;       /* main text */
+  --muted: #5a6275;      /* secondary */
+  --accent: #CC0000;     /* primary accent */
+  --accent-soft: rgba(58,135,255,0.12);
+  --border: #e6e8ef;
+  --radius: 20px;
+  --shadow: 0 10px 30px rgba(16,24,40,0.08);
+  --space: 16px;
+  --space-lg: 28px;
+  --maxw: 820px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Comfortaa', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 400; /* Comfortaa regular for body */
+  letter-spacing: 0.2px;
+  color: var(--text);
+  background: radial-gradient(1200px 700px at 20% -10%, var(--accent-soft), transparent 60%), var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.site-header {
+  padding: calc(var(--space-lg) + 6px) 0 var(--space-lg);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space);
+}
+
+.brand-icon {
+  width: 64px; height: 64px;
+  border-radius: 18px;
+  box-shadow: 0 10px 22px rgba(58,135,255,0.18);
+}
+
+.brand-text .app-name {
+  display: block;
+  font-weight: 700; /* Comfortaa bold for labels */
+  color: var(--accent);
+}
+
+.brand .tagline {
+  display: block;
+  margin-top: 4px;
+  font-weight: 700; /* headings bold */
+  font-size: 28px;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: calc(var(--space-lg) + 6px);
+}
+
+.policy {
+  margin: 8px 0 24px;
+}
+
+.policy h1 {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.policy p {
+  margin: 0 0 12px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.policy a { color: var(--accent); text-decoration: none; }
+.policy a:hover { text-decoration: underline; }
+
+.site-footer {
+  padding: 0 0 36px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 520px) {
+  .brand { gap: 12px; }
+  .brand-icon { width: 56px; height: 56px; border-radius: 16px; }
+  .brand .tagline, .policy h1 { font-size: 24px; }
+  .policy p { font-size: 17px; }
+}

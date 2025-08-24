@@ -1,0 +1,8 @@
+{
+  "name": "numbers-privacy-policy",
+  "version": "1.0.0",
+  "description": "A privacy policy landing page for \"Numbers\" minigame",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
